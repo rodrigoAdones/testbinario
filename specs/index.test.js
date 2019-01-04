@@ -1,9 +1,11 @@
 const Prueba = require('../src/index');
 
 describe('Validate function', () => {
-    console.log('asdadasda ', Prueba);
     it('Prueba.toDecimal is a function', () => {
         expect(typeof Prueba.toDecimal).toEqual('function');
+    });
+    it('Prueba.toDecimal is a function', () => {
+        expect(Prueba.toDecimal('3b3')).toBe(0);
     });
     it('should support null parameter', () => {
         expect(Prueba.toDecimal(null)).toBe(0);
